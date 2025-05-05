@@ -40,7 +40,7 @@ export function useColorModeValue<T>(light: T, dark: T) {
 
 export function ColorModeIcon() {
   const { colorMode } = useColorMode()
-  return colorMode === 'dark' ? <LuMoon /> : <LuSun />
+  return colorMode === 'dark' ? <LuMoon /> : <LuSun color="white" />
 }
 
 interface ColorModeButtonProps extends Omit<IconButtonProps, 'aria-label'> {}
@@ -53,7 +53,10 @@ export const ColorModeButton = React.forwardRef<HTMLButtonElement, ColorModeButt
         onClick={toggleColorMode}
         variant="ghost"
         aria-label="Toggle color mode"
-        size="sm"
+        size="lg"
+        borderRadius={'full'}
+        boxShadow={'lg'}
+        bgColor={'secondary.500'}
         ref={ref}
         {...props}
         css={{

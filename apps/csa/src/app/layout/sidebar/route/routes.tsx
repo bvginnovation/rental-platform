@@ -13,6 +13,11 @@ export const MENU_BY_ROLE: Record<string, ILink[]> = {
   AUTOMOBILISTE: [
     {
       path: MODULES_CARS_ROUTES.DASHBOARD,
+      label: 'Tableau de bord',
+      icon: HomeIcon,
+    },
+    {
+      path: MODULES_CARS_ROUTES.MANAGE_CARS,
       label: 'Voitures',
       icon: HomeIcon,
     },
